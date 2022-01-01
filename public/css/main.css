@@ -1,0 +1,137 @@
+body{
+  text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+    color: pink;
+}
+
+h3 {
+    text-align: center;
+    color:green;
+}
+
+h4 {
+    text-align: center;
+    color: red;
+}
+
+p{
+  text-align: center;
+}
+
+
+/* Style the header */
+/* header {
+  padding: 20px;
+  text-align: center; */
+  /* font-size: 25px;
+  color: white; */
+/* } */
+
+/* Create two columns/boxes that floats next to each other */
+/* aside {
+  float: left; */
+  /* width: 30%;
+  height: 300px; /* only for demonstration, should be removed 
+  background: #ccc;
+  padding: 20px; */
+/* } */
+
+/* Clear floats after the columns */
+/* section::after {
+  content: "";
+  display: table;
+  clear: both; 
+} */
+
+/* profile page */
+  .profile-user{ 
+     text-align: center;
+    /*align-content: center; */
+    /* display: flex;
+    justify-content: center; 
+    align-items: center; */
+  }
+
+
+/* split image */
+  .split {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 50;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #111;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+
+  /* navbar */
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .site-title{
+    font-family: 'Lobster', cursive;
+  }
+
+  /* forms */
+.forms{
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+}
+/* .searchbar{
+  left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+} */
+
+.post-text{
+  resize:none;
+  /* display: block; */
+}
+
+
+/* buttons */
+button {
+    background-color: #498cc4;
+    color: white;
+    padding: 5px 70px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+  }
+
+ button:hover {
+    opacity: 0.8;
+  }
+  

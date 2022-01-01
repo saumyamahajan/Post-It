@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head.html'); %>
+  <meta charset="UTF-8">
+  <title>Post-It</title>
+</head>
+<body>
+  <h2>Posts : </h2>
+
+  <div class="forms">
+  <form action="/posts" method="POST">
+    <input type="text" placeholder="Title" name="title" required/>
+    <br><br>
+    <!-- <input type="text" placeholder="Description" name="description" /> -->
+    <textarea maxlength="300" class="post-text" name="description" rows="4" cols="50" required></textarea>
+    <br><br>
+     <input type="hidden"  name="userId" value="<%= userId %>" />
+    
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <button onclick="history.back()" type="submit">Back</button>
+
+</div>
+
+</body>
+</html>

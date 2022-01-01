@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head.html'); %>
+  <meta charset="UTF-8">
+  <title>Post-It</title>
+  <!-- <link rel="stylesheet" href="head.ejs">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+<link rel="import" href="head.html"> -->
+
+</head>
+
+<body>
+  <h1>Search : <%= searchUserObj.userName %></h1>
+  <br>
+  <!-- show post count , no of followers/following -->
+    <p>Send Request ? </p>
+  <form id="sendReq" action="follow" method="POST">
+    <input type="hidden" name="userId" value="<%= loginUserId %>">
+    <input type="hidden" name="followerId" value="<%= searchUserObj.userId %>">
+    <button id="searchbar" onclick="changeButton()" type="submit">FOLLOW</button>
+  </form>
+  <br>
+  <button onclick="history.back()" type="submit">Back</button>
+
+</body>
+
+<!-- <script>
+  function changeButton(){
+    document.getElementById("searchbar").value="Requested";
+  }
+</script> -->
+
+</html>

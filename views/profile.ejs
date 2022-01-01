@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="profile-user">
+      <!-- <header> -->
+        <h1>User : <%= userObj.userName %></h1>  
+      <!-- </header> -->
+      <h2>Posts : </h2>
+        <!-- <h3>post count: <%= postObj %></h3> -->
+    
+      </div>
+      
+      <!-- <section> -->
+    <div >
+      <!-- <h2>Posts : </h2> -->
+
+        <ul>
+            <% postObj.forEach(function(post) { %>
+              <li>
+                Post No : <%= post.postId %>
+                <strong> Title : <%= post.title %></strong>
+                 Description : <%= post.description %>,
+              </li>
+            <% }); %>
+          </ul>
+
+    </div>
+
+  </div> 
+
+    <!-- <aside> -->
+    <div class="split left">
+      <div class="centered">
+        <img src="/images/post-it.jpg" alt="Post-it">
+        <h2>Post-It</h2>
+        
+      </div>
+    
+
+  <!-- </aside>
+  </section> -->
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <%- include('../head'); %> -->
+  <meta charset="UTF-8">
+  <title>Post-It</title>
+  <link rel="stylesheet" href="head.ejs"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+<!-- <link rel="import" href="head.html"> -->
+
+
+
+
+
+</head>
+
+<body>
+  <h1>Sign Up</h1>
+
+  <!-- SIGN UP -->
+  <div class="forms">
+  <form action="/registration" method="POST">
+    <input type="email" placeholder="emailId" name="emailId" />
+    <br><br>
+    <input type="text" placeholder="userName" name="userName" />
+    <br><br>
+    <input type="password" placeholder="password"  name="password" />
+    <br><br>
+    <input type="number" placeholder="userId" name="userId" >
+    <br><br>
+    <button type="submit">Log In</button>
+      <br><br>
+
+      <a href="/login">Have an account? Log in</a>
+
+  </form>
+</div>
+
+</body>
+</html>

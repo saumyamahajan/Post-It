@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head.html'); %>
+  <meta charset="UTF-8">
+  <title>Post-It</title>
+</head>
+<body>
+  <h1 site-title>Post-It : <%= userObj.userName %></h1>
+
+
+  <div>
+    <form action="/search" method="POST" >
+      <input type="text" placeholder="Search" name="userName">
+      <input type="hidden" name="loginUserId" value="<%= userObj.userId %>">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!--class="navbar navbar-dark navbar-expand-lg bg-dark" -->
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand nav-link active" aria-current="page" href="/profile?userId=<%= userObj.userId %>">Profile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                 <a class="nav-link active"  href="/posts?userId=<%= userObj.userId %>">Create Post</a>
+                
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/followers?userId=<%= userObj.userId %>">Followers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/following?userId=<%= userObj.userId %>">Following</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/chat?userId=<%= userObj.userId %>">Chat</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/activity?loginUserId=<%= userObj.userId %>&loginUserName=<%= userObj.userName %>">Activity</a>
+              </li>
+              
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <div class="split left">
+    <div class="centered">
+      <img src="/images/post-it.jpg" alt="Post-it">
+      <h2>Post-It</h2>
+      
+    </div>
+  </div>
+
+<!-- <iframe src="/default.asp" width="100%" height="300" style="border:1px solid black;">
+</iframe> -->
+
+</body>
+</html>

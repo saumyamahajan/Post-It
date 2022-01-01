@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head.html'); %>
+  <meta charset="UTF-8">
+  <title>Post-It</title>
+  <!-- <link rel="stylesheet" href="head.ejs">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+<link rel="import" href="head.html"> -->
+
+</head>
+
+<body>
+  <h1>User : <%= loginUserName %></h1>
+  
+  <p><%= userObj.userName %> has requested to follow you</p>
+
+  <form action="activity" method="POST">
+    <input type="hidden" name="userId" value="<%= reqFollowersObj.userId %>"> 
+    <input type="hidden" name="followerId" value="<%= reqFollowersObj.followerId %>">
+    <button id="searchbar" type="submit">Accept</button>
+    <!-- <button id="searchbar" type="submit">Decline</button>
+    <button id="searchbar" type="submit">Follow Back</button> -->
+  </form>
+
+
+  <div><img src="post-it.jpg" alt="Post-it"></div>
+</body>
+</html>

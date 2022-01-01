@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head.html'); %>
+  <meta charset="UTF-8">
+  <title>Post-It</title>
+</head>
+<body>
+  <h3>Followers : </h3>
+<br>
+  <div>
+
+    <ul>
+        <% followerObj.forEach(function(follower) { %>
+          <li>
+            userId : <%= follower.userId %>
+           
+          </li>
+        <% }); %>
+      </ul>
+
+</div>
+
+<div class="split left">
+  <div class="centered">
+    <img src="/images/post-it.jpg" alt="Post-it">
+    <h2>Post-It</h2>
+    
+  </div>
+</div>
+
+</body>
+</html>
